@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --spotify-green: #1DB954;
+  --spotify-black: #191414;
+}
+
+body {
+  background-color: #121212;
+  color: white;
+  font-family: 'Circular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Card hover animation */
+.song-card {
+  transition: all 0.2s ease;
+}
+
+.song-card:hover {
+  transform: scale(1.02);
+}
+
+.song-card:active {
+  transform: scale(0.98);
+}
+
+/* Pulse animation for loading */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite;
+}
